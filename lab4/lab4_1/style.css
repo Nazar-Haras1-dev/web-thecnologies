@@ -5,12 +5,12 @@
 }
 
 p {
-  align: center;
+  align-items: center;
   color: #008000;
 }
 
 div {
-  align: justify;
+align-items: center;
 }
 
 .red-color {
