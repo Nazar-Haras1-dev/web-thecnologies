@@ -1,0 +1,110 @@
+.container {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Маркерований список 1-го рівня */
+ul li {
+    padding-right: 20px;
+    padding-left: 50px;
+    background-color: rgb(103, 158, 128);
+    margin-bottom: 10px;
+}
+
+/* Маркерований список 2-го рівня */
+ul ul li {
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+/* Елемент span */
+span {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+/* Елемент span в маркерованому списку 1-го рівня */
+.stage-title {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+
+/* Елемент span в маркерованому списку 2-го рівня */
+.item-title {
+    background-color: rgb(218, 106, 32);
+}
+
+/* Іконки для першого рівня списку */
+.p_stage {
+    background-image: url('../icons/rule.png');
+    background-position: 10px center; /* Розташування іконки */
+    background-repeat: no-repeat;
+    background-size: 20px 20px; /* Розмір іконки */
+}
+
+/* Іконки для другого рівня списку */
+.select_route {
+    background-image: url('../icons/ad_units.svg');
+}
+
+.tickets {
+    background-image: url('../icons/airplane_ticket.svg');
+}
+
+.hotel {
+    background-image: url('../icons/hotel.png');
+}
+
+.rent_car {
+    background-image: url('../icons/car_rental.svg');
+}
+
+.bars {
+    background-image: url('../icons/local_bar.svg');
+}
+
+.casino {
+    background-image: url('../icons/casino.svg');
+}
+
+.museium {
+    background-image: url('../icons/museum.png');
+}
+
+.festivals {
+    background-image: url('../icons/festival.svg');
+}
+
+/* Загальні стилі для іконок */
+.select_route,
+.tickets,
+.hotel,
+.rent_car,
+.bars,
+.casino,
+.museium,
+.festivals {
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding-left: 30px; /* Додаємо відступ, щоб іконка не перекривала текст */
+}

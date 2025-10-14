@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета користувача</title>
+    <link rel="stylesheet" href="../styles/lab5_3.css">
+</head>
+<body>
+<h1>Анкета користувача</h1>
+
+<!-- Форма з методом GET -->
+<form action="questionnaire.html" method="get" enctype="application/x-www-form-urlencoded">
+    <!-- Особисті дані -->
+    <fieldset>
+        <legend>Особисті дані</legend>
+
+        <label for="fname">Ім'я:</label>
+        <input type="text" id="fname" name="fname" placeholder="Введіть ваше ім'я" required tabindex="1"><br><br>
+
+        <label for="lname">Прізвище:</label>
+        <input type="text" id="lname" name="lname" placeholder="Введіть ваше прізвище" required tabindex="2"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="off"
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" tabindex="3"><br><br>
+
+        <label for="tel">Мобільний номер:</label>
+        <input type="tel" id="tel" name="tel" placeholder="+380XXXXXXXXX" required
+               pattern="\+380\d{9}" tabindex="4"><br><br>
+
+        <label for="dob">Дата народження:</label>
+        <input type="date" id="dob" name="dob" required tabindex="5"><br><br>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" placeholder="6 символів, 1 велика, 1 мала, 1 цифра"
+               required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}" tabindex="6"><br><br>
+    </fieldset>
+
+    <!-- Адреса -->
+    <fieldset>
+        <legend>Адреса</legend>
+
+        <label for="address">Адреса:</label>
+        <textarea id="address" name="address" placeholder="Введіть вашу адресу" rows="3" cols="30" required tabindex="7"></textarea><br><br>
+    </fieldset>
+
+    <!-- Стать -->
+    <fieldset>
+        <legend>Стать</legend>
+        <input type="radio" id="male" name="gender" value="male" required tabindex="8">
+        <label for="male">Чоловіча</label><br>
+        <input type="radio" id="female" name="gender" value="female" tabindex="9">
+        <label for="female">Жіноча</label><br>
+        <input type="radio" id="other" name="gender" value="other" tabindex="10">
+        <label for="other">Інша</label><br><br>
+    </fieldset>
+
+    <!-- Улюблений колір -->
+    <fieldset>
+        <legend>Улюблений колір</legend>
+        <input type="radio" id="red" name="color" value="red" tabindex="11">
+        <label for="red">Червоний</label><br>
+        <input type="radio" id="green" name="color" value="green" tabindex="12">
+        <label for="green">Зелений</label><br>
+        <input type="radio" id="blue" name="color" value="blue" checked tabindex="13">
+        <label for="blue">Синій</label><br><br>
+    </fieldset>
+
+    <!-- Хобі -->
+    <fieldset>
+        <legend>Хобі</legend>
+        <input type="checkbox" id="reading" name="hobby" value="reading" tabindex="14">
+        <label for="reading">Читання</label><br>
+        <input type="checkbox" id="music" name="hobby" value="music" tabindex="15">
+        <label for="music">Музика</label><br>
+        <input type="checkbox" id="sports" name="hobby" value="sports" tabindex="16">
+        <label for="sports">Спорт</label><br>
+        <input type="checkbox" id="travel" name="hobby" value="travel" tabindex="17">
+        <label for="travel">Подорожі</label><br><br>
+    </fieldset>
+
+    <!-- Вибір міст -->
+    <fieldset>
+        <legend>Вибір міста</legend>
+        <label for="city">Місто:</label>
+        <select id="city" name="city" required tabindex="18">
+            <option value="" disabled selected>Оберіть місто</option>
+            <option value="kyiv">Київ</option>
+            <option value="lviv">Львів</option>
+            <option value="odessa">Одеса</option>
+            <option value="dnipro">Дніпро</option>
+            <option value="kharkiv">Харків</option>
+        </select><br><br>
+
+        <label for="countries">Країни (можна вибрати кілька):</label>
+        <select id="countries" name="countries" multiple size="6" tabindex="19">
+            <option value="ukraine">Україна</option>
+            <option value="poland">Польща</option>
+            <option value="germany">Німеччина</option>
+            <option value="france">Франція</option>
+            <option value="spain">Іспанія</option>
+            <option value="italy">Італія</option>
+        </select><br><br>
+
+        <label for="continent">Континент:</label>
+        <select id="continent" name="continent" tabindex="20">
+            <optgroup label="Європа">
+                <option value="europe1">Франція</option>
+                <option value="europe2">Німеччина</option>
+                <option value="europe3">Італія</option>
+            </optgroup>
+            <optgroup label="Азія">
+                <option value="asia1">Китай</option>
+                <option value="asia2">Японія</option>
+                <option value="asia3">Індія</option>
+            </optgroup>
+            <optgroup label="Америка">
+                <option value="america1">США</option>
+                <option value="america2">Канада</option>
+                <option value="america3">Бразилія</option>
+            </optgroup>
+            <optgroup label="Африка">
+                <option value="africa1">Єгипет</option>
+                <option value="africa2">Південна Африка</option>
+                <option value="africa3">Нігерія</option>
+            </optgroup>
+        </select><br><br>
+
+        <label for="browser">Ваш улюблений браузер:</label>
+        <input list="browsers" name="browser" id="browser" placeholder="Виберіть браузер" tabindex="21">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Safari">
+            <option value="Opera">
+        </datalist><br><br>
+    </fieldset>
+
+    <!-- Завантаження аудіо -->
+    <fieldset>
+        <legend>Завантаження аудіо</legend>
+        <label for="audio">Виберіть аудіо файли:</label>
+        <input type="file" id="audio" name="audiofiles" accept="audio/*" multiple tabindex="22"><br><br>
+    </fieldset>
+
+    <!-- Кнопки -->
+    <button type="submit" tabindex="23">Відправити</button>
+    <button type="reset" tabindex="24">Очистити</button>
+</form>
+
+<!-- Форма з методом POST і enctype="multipart/form-data" -->
+<form action="questionnaire.html" method="post" enctype="multipart/form-data">
+    <p>Ця форма демонструє POST-запит з завантаженням файлів.</p>
+    <button type="submit">Відправити POST</button>
+</form>
+
+</body>
+</html>
